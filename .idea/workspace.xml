@@ -13,7 +13,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27562b93-6d05-47f6-8caa-35a58e230aa8" name="Default Changelist" comment="" />
+    <list default="true" id="27562b93-6d05-47f6-8caa-35a58e230aa8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,8 +94,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="142" selection-start-line="142" selection-end-line="142" />
+            <state relative-caret-position="230">
+              <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
               <folding>
                 <element signature="e#44#63#0" expanded="true" />
                 <element signature="e#2296#2561#0" />
@@ -249,12 +251,20 @@
       <workItem from="1552650478468" duration="1056000" />
       <workItem from="1552911161189" duration="589000" />
       <workItem from="1552912223734" duration="4170000" />
-      <workItem from="1552916453605" duration="8860000" />
+      <workItem from="1552916453605" duration="9871000" />
     </task>
+    <task id="LOCAL-00001" summary="deleted some comments">
+      <created>1552938772963</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1552938772963</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59939000" />
+    <option name="totallyTimeSpent" value="60950000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -268,7 +278,7 @@
   <component name="ToolWindowManager">
     <frame x="2624" y="-11" width="1857" height="1092" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21185984" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2172471" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -279,15 +289,15 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295099" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.24087591" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.24660397" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3295099" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.32959184" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.3291536" />
       <window_info anchor="bottom" id="CMake" order="11" weight="0.32846716" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="Event Log" order="4" side_tool="true" visible="true" weight="0.3212938" />
+      <window_info anchor="right" id="Event Log" order="4" side_tool="true" visible="true" weight="0.32946378" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21824287" />
@@ -320,6 +330,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
+    <MESSAGE value="deleted some comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted some comments" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/cuda-support/CMakeListst.txt" />
@@ -421,8 +433,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="142" selection-start-line="142" selection-end-line="142" />
+        <state relative-caret-position="230">
+          <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
           <folding>
             <element signature="e#44#63#0" expanded="true" />
             <element signature="e#2296#2561#0" />
