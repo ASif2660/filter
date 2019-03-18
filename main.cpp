@@ -60,7 +60,7 @@ int main(int argc, char* argv[]) {
 
     simple_edge_detector::edge_detector detect(actual_image);        /* initialize detector */
 
-    detect.show_frame_window();             /*display a short window */
+    //detect.show_frame_window();             /*display a short window */
 
     detect.opencv_to_eigen(global_eigen_matrix);
 
@@ -86,13 +86,28 @@ int main(int argc, char* argv[]) {
 
     double*  global_kernel_y = kernel_x.data();  //row major and kernel_x is basically the transpose
 
-    double*  global_output_matrix = new double[global_eigen_matrix.rows()*global_eigen_matrix.cols()];
+    auto*  global_output_matrix = new double[global_eigen_matrix.rows()*global_eigen_matrix.cols()];
 
     detect.execute_kernels(global_vectorized_matrix, global_kernel_x, global_kernel_y, global_output_matrix);
 
+    std::cout << global_output_matrix[1] << std::endl;
 
+    MatrixXf output(ROWS,COLS);
 
-    /*call the kernel based function */
+    simple_edge_detector::vector_to_matrix(global_output_matrix, output );
+
+    cv::Mat output_Image(ROWS, COLS, CV_8UC1, CvScalar(0) );
+
+    detect.set_output_eigen_matrix(output);
+
+    detect.eigen_to_opencv(output_Image);
+
+    cv::namedWindow("The frame window ",CV_WINDOW_AUTOSIZE);
+
+    cv::imshow("Image", output_Image  );
+    // cv::waitKey(0); //display until key is pressed
+
+    cv::waitKey(5000); //display for 5 secs
 
 
 

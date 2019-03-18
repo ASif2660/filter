@@ -7,7 +7,12 @@
 
 
 
+void simple_edge_detector::edge_detector::set_output_eigen_matrix(MatrixXf &eigen_matrix) {
 
+
+    _eigenMatrix = eigen_matrix;
+
+}
 
 
 void simple_edge_detector::edge_detector::eigen_to_opencv(cv::Mat& cv_image ) {
@@ -111,17 +116,18 @@ void simple_edge_detector::print_block_matrix(MatrixXf some_eigen_matrix, int bl
 
 
 
-void simple_edge_detector::vector_to_matrix(double* vector, double** matrix, int size_of_vector, int rows, int cols){
+void simple_edge_detector::vector_to_matrix(double* vector, MatrixXf eigen_output){
 
 
     // this basically converts the vector to matrix of required size
-
-    if( size_of_vector !=  rows * cols ){
+/*
+    if( size_of_vector !=  ROWS * COLS ){
 
 
         std::cout << " This is an illegal conversion !!!, Please check the total size, rows and cols " << std::endl;
 
     }
+
 
 
     matrix = new double*[rows];
@@ -136,13 +142,13 @@ void simple_edge_detector::vector_to_matrix(double* vector, double** matrix, int
     }
 
     //create the matrix
+*/
 
+    for( int j=0; j < COLS; j++ ){
 
-    for( int j=0; j < cols; j++ ){
+        for (int i =0; i < ROWS; i++){
 
-        for (int i =0; i < rows; i++){
-
-            matrix[i][j] = vector[cols*i + j];
+            eigen_output(i,j) = vector[COLS*i + j];
 
 
         }
@@ -153,40 +159,15 @@ void simple_edge_detector::vector_to_matrix(double* vector, double** matrix, int
 
 
 __global__
-void simple_edge_detector::edge_detector_gpu (double* vectorized_matrix, double* kernel_x, double* kernel_y, double* output_vector_matrix){
+void simple_edge_detector::edge_detector_gpu (double* vectorized_matrix, double* kernel_x, double* kernel_y, double* output_vector_matrix)
+{
+
+    int index = blockIdx.x*blockDim.x+ threadIdx.x;
+
+    int size = ROWS*COLS;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    output_vector_matrix[index] =vectorized_matrix[index] ;
 
 
 

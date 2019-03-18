@@ -58,7 +58,7 @@ namespace simple_edge_detector{
 
   void print_block_matrix (MatrixXf some_eigen_matrix, int block_rows, int block_cols);
 
-  void vector_to_matrix(double* vector, double** matrix, int size_of_vector, int rows, int cols);
+  void vector_to_matrix(double* vector, MatrixXf eigen_output);
 
 
   __global__
@@ -107,9 +107,11 @@ namespace simple_edge_detector{
         }
 
 
-        void eigen_to_opencv(cv::Mat& cv_image );
+        void eigen_to_opencv(cv::Mat& output );
 
         void  opencv_to_eigen(MatrixXf& eigen_matrix);
+
+        void set_output_eigen_matrix(MatrixXf& eigen_matrix);
 
         int get_frame_width_cv();
 
@@ -139,6 +141,8 @@ namespace simple_edge_detector{
          double* device_kernel_x;
 
          double* device_kernel_y;
+
+
 
 
         //   sobel_operator* _op;
