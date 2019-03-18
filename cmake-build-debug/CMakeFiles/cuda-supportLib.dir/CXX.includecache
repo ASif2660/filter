@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/asif/CLionProjects/filter/cuda-support/include/filter.h
+cuda_runtime.h
+-
+
+/home/asif/CLionProjects/filter/cuda-support/src/filter.cpp
+../include/filter.h
+/home/asif/CLionProjects/filter/cuda-support/include/filter.h
+

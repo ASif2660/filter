@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="packageWithCuda"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\opt\;CMake Files\..\..\..\..\opt\ros\;CMake Files\..\..\..\..\opt\ros\kinetic\;CMake Files\..\..\..\..\opt\ros\kinetic\share\;CMake Files\..\..\..\..\opt\ros\kinetic\share\OpenCV-3.3.1-dev\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/asif/CLionProjects/filter/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/asif/CLionProjects/filter/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="testdetector">
+				<Option working_dir="/home/asif/CLionProjects/filter/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 testdetector"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="myLib">
+				<Option output="/home/asif/CLionProjects/filter/cmake-build-debug/lib/libmyLib.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/asif/CLionProjects/filter/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/cuda/include"/>
+					<Add directory="/home/asif/CLionProjects/filter/eigen/include/eigen3"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 myLib"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="myLib/fast">
+				<Option output="/home/asif/CLionProjects/filter/cmake-build-debug/lib/libmyLib.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/asif/CLionProjects/filter/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/cuda/include"/>
+					<Add directory="/home/asif/CLionProjects/filter/eigen/include/eigen3"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 myLib/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/asif/CLionProjects/filter/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="filter">
+				<Option output="/home/asif/CLionProjects/filter/cmake-build-debug/bin/filter" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/asif/CLionProjects/filter/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/cuda/include"/>
+					<Add directory="/home/asif/CLionProjects/filter/eigen/include/eigen3"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 filter"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="filter/fast">
+				<Option output="/home/asif/CLionProjects/filter/cmake-build-debug/bin/filter" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/asif/CLionProjects/filter/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/cuda/include"/>
+					<Add directory="/home/asif/CLionProjects/filter/eigen/include/eigen3"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 filter/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/asif/CLionProjects/filter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/asif/CLionProjects/filter/cuda-support/include/filter.h">
+			<Option target="myLib"/>
+		</Unit>
+		<Unit filename="/home/asif/CLionProjects/filter/cuda-support/src/filter.cu">
+			<Option target="myLib"/>
+		</Unit>
+		<Unit filename="/home/asif/CLionProjects/filter/main.cpp">
+			<Option target="filter"/>
+		</Unit>
+		<Unit filename="/home/asif/CLionProjects/filter/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/asif/CLionProjects/filter/../../../../opt/ros/kinetic/share/OpenCV-3.3.1-dev/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\OpenCV-3.3.1-dev\"/>
+		</Unit>
+		<Unit filename="/home/asif/CLionProjects/filter/../../../../opt/ros/kinetic/share/OpenCV-3.3.1-dev/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\OpenCV-3.3.1-dev\"/>
+		</Unit>
+		<Unit filename="/home/asif/CLionProjects/filter/../../../../opt/ros/kinetic/share/OpenCV-3.3.1-dev/OpenCVModules-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\OpenCV-3.3.1-dev\"/>
+		</Unit>
+		<Unit filename="/home/asif/CLionProjects/filter/../../../../opt/ros/kinetic/share/OpenCV-3.3.1-dev/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\ros\kinetic\share\OpenCV-3.3.1-dev\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
