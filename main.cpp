@@ -2,8 +2,9 @@
  * created by Mohammed Asif Chand
  *
  */
+
 #include <iostream>
-#include "cuda-support/include/filter.h"
+#include "cuda-support/include/filter.cuh"
 #include "eigen/include/eigen3/Eigen/src/Core/Matrix.h"
 #include "../../../../usr/local/cuda/include/driver_types.h"
 #include <opencv2/core/core.hpp>
@@ -16,15 +17,12 @@
 #include <Eigen/Core>
 
 
-
-
 #pragma hd_warning_disable
 // this program is for testing
 
 #define DEBUG 0
 
-static const int COLS = 1307; // this has to be initialized for cuda mem allocation, static intializer errors?
-static const int ROWS = 1080;
+
 
 
 
@@ -36,6 +34,8 @@ int main(int argc, char* argv[]) {
     //MatrixXf m(1080,1307);
 
     MatrixXf global_eigen_matrix;  /* has dynamic sizing */
+
+    MatrixXf temp_global_matrix;
 
     MatrixXf kernel_x(3,3);
 
@@ -68,10 +68,36 @@ int main(int argc, char* argv[]) {
 
     std::cout << global_eigen_matrix << std::endl;
 
-    //allocate memory on heap
+
+    // TODO: triangulate with bool on the global_eigen_matrix
+
+
+    /* Since eigen stores values in column major we use transpose */
+    /* double pointers of matrix are not really good in terms of performance on GPU */
+
+
+    global_eigen_matrix.transposeInPlace(); //converts rows to columns an vice versa
+
+    std::cout << global_eigen_matrix.cols() << " | " << global_eigen_matrix.rows() << std::endl;
+
+    double*  global_vectorized_matrix = global_eigen_matrix.data();
+
+    double*  global_kernel_x = kernel_y.data(); // column major and kernel_y is basically transpose of kernel_x
+
+    double*  global_kernel_y = kernel_x.data();  //row major and kernel_x is basically the transpose
+
+    double*  global_output_matrix = new double[global_eigen_matrix.rows()*global_eigen_matrix.cols()];
+
+    detect.execute_kernels(global_vectorized_matrix, global_kernel_x, global_kernel_y, global_output_matrix);
 
 
 
+    /*call the kernel based function */
+
+
+
+
+/*
 
     double** my_matrix = new double*[global_eigen_matrix.rows()];
 
@@ -115,7 +141,7 @@ int main(int argc, char* argv[]) {
 
     detect.eigen_to_double(my_kernel_y, kernel_y);
 
-/*
+
     for( int i =0; i< kernel_x.rows(); i++)
     {
         for( int j=0; j < kernel_x.cols(); j++){
@@ -126,7 +152,7 @@ int main(int argc, char* argv[]) {
         }
     }
 
-*/
+
 
 
     double** device_matrix;
@@ -144,33 +170,11 @@ int main(int argc, char* argv[]) {
     }
 
 
+*/
 
 
 
-
-
-    /* important declarations for GPU */
-
-    // int totalsize = global_eigen_matrix.cols() * global_eigen_matrix.rows() * sizeof(float);
-
-//     cudaMalloc( (void**)&device_input_matrix, sizeof(m) );
-
-//     cudaMalloc( (void**)&device_output_matrix, sizeof(m) );
-
-
-// cudaMemcpy(device_input_matrix, global_eigen_matrix, sizeof(m), cudaMemcpyHostToDevice );
-
-
-
-  //  cudaCheckErrors("cudaMalloc fail");
-
-     /* note cuda-9.0 has issues with
-
-
-
-
-
-    return 0;
+return 0;
 
 }
 

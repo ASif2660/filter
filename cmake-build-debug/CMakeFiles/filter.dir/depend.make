@@ -213,7 +213,7 @@ CMakeFiles/filter.dir/main.cpp.o: ../eigen/include/eigen3/Eigen/src/plugins/Comm
 CMakeFiles/filter.dir/main.cpp.o: ../eigen/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h
 CMakeFiles/filter.dir/main.cpp.o: ../eigen/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h
 CMakeFiles/filter.dir/main.cpp.o: ../eigen/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h
-CMakeFiles/filter.dir/main.cpp.o: ../cuda-support/include/filter.h
+CMakeFiles/filter.dir/main.cpp.o: ../cuda-support/include/filter.cuh
 CMakeFiles/filter.dir/main.cpp.o: ../eigen/include/eigen3/Eigen/src/Core/Matrix.h
 CMakeFiles/filter.dir/main.cpp.o: ../main.cpp
 CMakeFiles/filter.dir/main.cpp.o: /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h

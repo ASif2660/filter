@@ -156,7 +156,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/asif/CLionProjects/filter/cuda-support/include/filter.h">
+		<Unit filename="/home/asif/CLionProjects/filter/cuda-support/include/filter.cuh">
 			<Option target="myLib"/>
 		</Unit>
 		<Unit filename="/home/asif/CLionProjects/filter/cuda-support/src/filter.cu">

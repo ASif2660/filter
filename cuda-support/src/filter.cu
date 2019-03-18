@@ -2,7 +2,7 @@
 // Created by asif on 07.03.19.
 //
 
-#include "../include/filter.h"
+#include "../include/filter.cuh"
 
 
 
@@ -150,3 +150,92 @@ void simple_edge_detector::vector_to_matrix(double* vector, double** matrix, int
 
 }
 
+
+
+__global__
+void simple_edge_detector::edge_detector_gpu (double* vectorized_matrix, double* kernel_x, double* kernel_y, double* output_vector_matrix){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+void simple_edge_detector::edge_detector::execute_kernels(double* global_vectorized_matrix, double* global_kernel_x, double* global_kernel_y,
+
+                     double* global_output_matrix){
+
+
+    //TODO: initialize global_output_matrix before passing it
+
+    dim3 GRID(GRIDSIZE);
+
+    dim3 BLOCK(BLOCKSIZE);
+
+    cudaMalloc((void**)&device_vectorized_matrix, ROWS*COLS*sizeof(double));
+
+    cudaMalloc((void**)&device_gpu_output, ROWS*COLS*sizeof(double));
+
+    cudaMalloc((void**)&device_kernel_x, 9*sizeof(double));
+
+    cudaMalloc((void**)&device_kernel_y, 9*sizeof(double)); // kernel size is hard coded for now, 3x3 is the size
+
+
+    cudaMemcpy(device_vectorized_matrix, global_vectorized_matrix, ROWS*COLS*sizeof(double), cudaMemcpyHostToDevice);
+
+    cudaMemcpy(device_kernel_x, global_kernel_x, 9*sizeof(double), cudaMemcpyHostToDevice);
+
+    cudaMemcpy(device_kernel_y, global_kernel_y, 9*sizeof(double), cudaMemcpyHostToDevice);
+
+
+
+    edge_detector_gpu <<<GRID, BLOCK >>> (device_vectorized_matrix, device_kernel_x, device_kernel_y, device_gpu_output);
+
+
+    cudaMemcpy(global_output_matrix, device_gpu_output, ROWS*COLS*sizeof(double), cudaMemcpyDeviceToHost);
+
+
+    //initialize global_kernel_x, global_kernel_y and global matrix
+
+    cudaFree(device_gpu_output);
+
+    cudaFree(device_kernel_x);
+
+    cudaFree(device_kernel_y);
+
+    cudaFree(device_vectorized_matrix);
+
+
+
+}

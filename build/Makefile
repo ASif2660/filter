@@ -176,32 +176,32 @@ cuda-support/src/filter.cu.s:
 	$(MAKE) -f CMakeFiles/myLib.dir/build.make CMakeFiles/myLib.dir/cuda-support/src/filter.cu.s
 .PHONY : cuda-support/src/filter.cu.s
 
-main.o: main.cpp.o
+main.o: main.cu.o
 
 .PHONY : main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/filter.dir/build.make CMakeFiles/filter.dir/main.cpp.o
-.PHONY : main.cpp.o
+main.cu.o:
+	$(MAKE) -f CMakeFiles/filter.dir/build.make CMakeFiles/filter.dir/main.cu.o
+.PHONY : main.cu.o
 
-main.i: main.cpp.i
+main.i: main.cu.i
 
 .PHONY : main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/filter.dir/build.make CMakeFiles/filter.dir/main.cpp.i
-.PHONY : main.cpp.i
+main.cu.i:
+	$(MAKE) -f CMakeFiles/filter.dir/build.make CMakeFiles/filter.dir/main.cu.i
+.PHONY : main.cu.i
 
-main.s: main.cpp.s
+main.s: main.cu.s
 
 .PHONY : main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/filter.dir/build.make CMakeFiles/filter.dir/main.cpp.s
-.PHONY : main.cpp.s
+main.cu.s:
+	$(MAKE) -f CMakeFiles/filter.dir/build.make CMakeFiles/filter.dir/main.cu.s
+.PHONY : main.cu.s
 
 # Help Target
 help:

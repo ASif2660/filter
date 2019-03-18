@@ -214,7 +214,7 @@ CMakeFiles/myLib.dir/cuda-support/src/filter.cu.o
  ../eigen/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h
  ../eigen/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h
  ../eigen/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h
- /home/asif/CLionProjects/filter/cuda-support/include/filter.h
+ /home/asif/CLionProjects/filter/cuda-support/include/filter.cuh
  /home/asif/CLionProjects/filter/cuda-support/src/filter.cu
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d.hpp

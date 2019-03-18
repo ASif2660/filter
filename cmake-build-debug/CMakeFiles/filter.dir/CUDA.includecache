@@ -1066,7 +1066,7 @@ lapacke_mangling.h
 
 ../eigen/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h
 
-/home/asif/CLionProjects/filter/cuda-support/include/filter.h
+/home/asif/CLionProjects/filter/cuda-support/include/filter.cuh
 cuda_runtime.h
 -
 opencv2/opencv.hpp
@@ -1091,8 +1091,8 @@ opencv2/core/eigen.hpp
 /home/asif/CLionProjects/filter/main.cu
 iostream
 -
-cuda-support/include/filter.h
-/home/asif/CLionProjects/filter/cuda-support/include/filter.h
+cuda-support/include/filter.cuh
+/home/asif/CLionProjects/filter/cuda-support/include/filter.cuh
 eigen/include/eigen3/Eigen/src/Core/Matrix.h
 /home/asif/CLionProjects/filter/eigen/include/eigen3/Eigen/src/Core/Matrix.h
 ../../../../usr/local/cuda/include/driver_types.h

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="packageWithCuda" targetName="filter" />
       <config projectName="packageWithCuda" targetName="testdetector" />
+      <config projectName="packageWithCuda" targetName="filter" />
       <config projectName="packageWithCuda" targetName="myLib" />
     </generated>
   </component>
@@ -15,6 +15,46 @@
   <component name="ChangeListManager">
     <list default="true" id="27562b93-6d05-47f6-8caa-35a58e230aa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.14.0-rc1/CMakeDetermineCompilerABI_CUDA.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/3.14.0-rc1/CMakeDetermineCompilerABI_CUDA.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/filter.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/filter.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/filter.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/filter.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/filter.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/filter.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/filter.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/filter.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/filter.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/filter.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/filter.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/filter.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/filter.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/filter.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/filter.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/filter.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/filter.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/filter.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/myLib.dir/CUDA.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/myLib.dir/CUDA.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/myLib.dir/cuda-support/src/filter.cu.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/myLib.dir/cuda-support/src/filter.cu.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/myLib.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/myLib.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/myLib.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/myLib.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/myLib.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/myLib.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/testdetector.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/testdetector.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/build/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/bin/filter" beforeDir="false" afterPath="$PROJECT_DIR$/build/bin/filter" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/libmyLib.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/libmyLib.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/filter.dir/CUDA.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/filter.dir/CUDA.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/filter.dir/cmake_device_link.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/filter.dir/cmake_device_link.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/filter.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/filter.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/filter.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/filter.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/filter.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/myLib.dir/CUDA.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/myLib.dir/CUDA.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/myLib.dir/cmake_device_link.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/myLib.dir/cmake_device_link.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/myLib.dir/cuda-support/src/filter.cu.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/myLib.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/myLib.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/myLib.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/myLib.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/bin/filter" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/bin/filter" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libmyLib.so" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/libmyLib.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/packageWithCuda.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/packageWithCuda.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuda-support/include/filter.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuda-support/src/filter.cu" beforeDir="false" afterPath="$PROJECT_DIR$/cuda-support/src/filter.cu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +74,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="190">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="92" selection-start-line="92" selection-end-line="92" />
+              <folding>
+                <element signature="e#162#181#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -52,7 +104,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cuda-support/matlab/sobelFilter.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
+            <state relative-caret-position="631">
               <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
             </state>
           </provider>
@@ -67,38 +119,22 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cuda-support/include/filter.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="106" column="69" selection-start-line="106" selection-start-column="69" selection-end-line="106" selection-end-column="69" />
-              <folding>
-                <element signature="e#170#195#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cuda-support/src/filter.cu">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="61" selection-start-line="61" selection-end-line="61" />
-              <folding>
-                <element signature="e#750#917#0" />
-              </folding>
+            <state relative-caret-position="306">
+              <caret line="158" column="8" selection-start-line="158" selection-start-column="8" selection-end-line="158" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.cpp">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cuda-support/include/filter.cuh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
+            <state relative-caret-position="1197">
+              <caret line="111" column="54" lean-forward="true" selection-start-line="111" selection-start-column="54" selection-end-line="111" selection-end-column="54" />
               <folding>
-                <element signature="e#44#63#0" expanded="true" />
-                <element signature="e#2296#2561#0" />
+                <element signature="e#170#195#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -113,6 +149,7 @@
       <find>main</find>
       <find>filter.cpp</find>
       <find>device_eige</find>
+      <find>filter.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -122,14 +159,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/cuda-support/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/READMe.md" />
         <option value="$PROJECT_DIR$/cuda-support/README.md" />
-        <option value="$PROJECT_DIR$/main.cu" />
         <option value="$PROJECT_DIR$/cuda-support/src/filter.cpp" />
         <option value="$PROJECT_DIR$/cuda-support/include/filter.h" />
-        <option value="$PROJECT_DIR$/cuda-support/src/filter.cu" />
+        <option value="$PROJECT_DIR$/main.cu" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/cuda-support/include/filter.cuh" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/cuda-support/src/filter.cu" />
       </list>
     </option>
   </component>
@@ -162,6 +200,12 @@
               <item name="packageWithCuda" type="b2602c69:ProjectViewProjectNode" />
               <item name="filter" type="462c0819:PsiDirectoryNode" />
               <item name="cuda-support" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="packageWithCuda" type="b2602c69:ProjectViewProjectNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
+              <item name="cuda-support" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="packageWithCuda" type="b2602c69:ProjectViewProjectNode" />
@@ -251,7 +295,9 @@
       <workItem from="1552650478468" duration="1056000" />
       <workItem from="1552911161189" duration="589000" />
       <workItem from="1552912223734" duration="4170000" />
-      <workItem from="1552916453605" duration="9871000" />
+      <workItem from="1552916453605" duration="13131000" />
+      <workItem from="1552942279647" duration="187000" />
+      <workItem from="1552942542346" duration="3561000" />
     </task>
     <task id="LOCAL-00001" summary="deleted some comments">
       <created>1552938772963</created>
@@ -260,11 +306,18 @@
       <option name="project" value="LOCAL" />
       <updated>1552938772963</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="deleted some comments">
+      <created>1552938885276</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1552938885276</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60950000" />
+    <option name="totallyTimeSpent" value="67958000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -277,13 +330,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="2624" y="-11" width="1857" height="1092" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2172471" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.22959183" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22884013" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39937434" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -291,13 +345,13 @@
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.24660397" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3295099" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.3291536" />
-      <window_info anchor="bottom" id="CMake" order="11" weight="0.32846716" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3291536" />
+      <window_info anchor="bottom" id="CMake" order="11" weight="0.32810867" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="Event Log" order="4" side_tool="true" visible="true" weight="0.32946378" />
+      <window_info anchor="right" id="Event Log" order="4" side_tool="true" visible="true" weight="0.03427308" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21824287" />
@@ -374,7 +428,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cu" />
     <entry file="file://$PROJECT_DIR$/cuda-support/src/filter.cpp" />
     <entry file="file://$PROJECT_DIR$/eigen/include/eigen3/Eigen/src/Core/DenseBase.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -383,10 +436,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/cuda-support/include/filter.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="2261">
+          <caret line="119" column="45" selection-start-line="119" selection-start-column="45" selection-end-line="119" selection-end-column="45" />
+          <folding>
+            <element signature="e#170#195#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -399,7 +455,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cuda-support/matlab/sobelFilter.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
+        <state relative-caret-position="631">
           <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
         </state>
       </provider>
@@ -411,34 +467,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cuda-support/src/filter.cu">
+    <entry file="file://$PROJECT_DIR$/main.cu">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        <state relative-caret-position="1539">
+          <caret line="93" column="39" lean-forward="true" selection-start-line="93" selection-start-column="39" selection-end-line="93" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
           <folding>
-            <element signature="e#750#917#0" />
+            <element signature="e#162#181#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cuda-support/include/filter.h">
+    <entry file="file://$PROJECT_DIR$/cuda-support/include/filter.cuh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="106" column="69" selection-start-line="106" selection-start-column="69" selection-end-line="106" selection-end-column="69" />
+        <state relative-caret-position="1197">
+          <caret line="111" column="54" lean-forward="true" selection-start-line="111" selection-start-column="54" selection-end-line="111" selection-end-column="54" />
           <folding>
             <element signature="e#170#195#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/cuda-support/src/filter.cu">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
-          <folding>
-            <element signature="e#44#63#0" expanded="true" />
-            <element signature="e#2296#2561#0" />
-          </folding>
+        <state relative-caret-position="306">
+          <caret line="158" column="8" selection-start-line="158" selection-start-column="8" selection-end-line="158" selection-end-column="8" />
         </state>
       </provider>
     </entry>

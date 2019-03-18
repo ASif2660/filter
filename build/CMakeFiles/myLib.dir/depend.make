@@ -213,7 +213,7 @@ CMakeFiles/myLib.dir/cuda-support/src/filter.cu.o: ../eigen/include/eigen3/Eigen
 CMakeFiles/myLib.dir/cuda-support/src/filter.cu.o: ../eigen/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h
 CMakeFiles/myLib.dir/cuda-support/src/filter.cu.o: ../eigen/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h
 CMakeFiles/myLib.dir/cuda-support/src/filter.cu.o: ../eigen/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h
-CMakeFiles/myLib.dir/cuda-support/src/filter.cu.o: ../cuda-support/include/filter.h
+CMakeFiles/myLib.dir/cuda-support/src/filter.cu.o: ../cuda-support/include/filter.cuh
 CMakeFiles/myLib.dir/cuda-support/src/filter.cu.o: ../cuda-support/src/filter.cu
 CMakeFiles/myLib.dir/cuda-support/src/filter.cu.o: /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h
 CMakeFiles/myLib.dir/cuda-support/src/filter.cu.o: /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d.hpp

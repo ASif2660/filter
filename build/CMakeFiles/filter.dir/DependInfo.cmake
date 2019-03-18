@@ -1,15 +1,15 @@
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
+  "CUDA"
   )
 # The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/asif/CLionProjects/filter/main.cpp" "/home/asif/CLionProjects/filter/build/CMakeFiles/filter.dir/main.cpp.o"
+set(CMAKE_DEPENDS_CHECK_CUDA
+  "/home/asif/CLionProjects/filter/main.cu" "/home/asif/CLionProjects/filter/build/CMakeFiles/filter.dir/main.cu.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CUDA_COMPILER_ID "NVIDIA")
 
 # The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
+set(CMAKE_CUDA_TARGET_INCLUDE_PATH
   "/usr/local/cuda/include"
   "../eigen/include/eigen3"
   "/opt/ros/kinetic/include/opencv-3.3.1-dev"
