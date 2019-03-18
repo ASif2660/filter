@@ -169,16 +169,6 @@ int main(int argc, char* argv[]) {
 
 
 
-    /* if( actual_image.empty()){
-
-         exit (1);
-     }
-
-     cv::namedWindow("someImage", cv::WINDOW_AUTOSIZE);
-     cv::imshow("Displaywindow", actual_image);
-     cv::waitKey(0);
-     */
-
 
     return 0;
 
