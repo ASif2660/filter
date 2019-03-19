@@ -58,7 +58,7 @@ namespace simple_edge_detector{
 
   void print_block_matrix (MatrixXf some_eigen_matrix, int block_rows, int block_cols);
 
-  void vector_to_matrix(double* vector, MatrixXf eigen_output);
+  void vector_to_matrix(double* vector, MatrixXf& eigen_output);
 
 
   __global__
@@ -106,6 +106,13 @@ namespace simple_edge_detector{
 
         }
 
+
+
+        double read_pixel_value (int i, int j){
+
+         return _Image->at<char>(i,j);
+
+        }
 
         void eigen_to_opencv(cv::Mat& output );
 

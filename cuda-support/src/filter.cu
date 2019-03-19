@@ -116,7 +116,7 @@ void simple_edge_detector::print_block_matrix(MatrixXf some_eigen_matrix, int bl
 
 
 
-void simple_edge_detector::vector_to_matrix(double* vector, MatrixXf eigen_output){
+void simple_edge_detector::vector_to_matrix(double* vector, MatrixXf& eigen_output){
 
 
     // this basically converts the vector to matrix of required size
@@ -162,12 +162,37 @@ __global__
 void simple_edge_detector::edge_detector_gpu (double* vectorized_matrix, double* kernel_x, double* kernel_y, double* output_vector_matrix)
 {
 
-    int index = blockIdx.x*blockDim.x+ threadIdx.x;
+    int col = blockIdx.x * blockDim.x + threadIdx.x;
+    int row = blockIdx.y * blockDim.y + threadIdx.y;
 
-    int size = ROWS*COLS;
+
+    //actual size is rows = 1080 and columns 1307
+
+    if((row < 1079 && row >0) || (col <1306 && col >0)) //within the inside indices {
+
+        output_vector_matrix[row*1307 + col] = vectorized_matrix[row*1307 + col -col -1]* kernel_x[0] +
+
+                vectorized_matrix[row*1307 +col -col]*kernel_x[1] + vectorized_matrix[row*1307 +col -col+ 1]*kernel_x[2] +
+
+                vectorized_matrix[row*1307+ col-1]* kernel_x[3] + vectorized_matrix[row*1307 +col]*kernel_x[4] +
+
+                vectorized_matrix[row*1307+ col+ 1]*kernel_x[5] + vectorized_matrix[row*1307+ col + col -1 ]*kernel_x[6]+
+
+                vectorized_matrix[row*1307 +col + col]* kernel_x[7]  + vectorized_matrix[row*1307 +col +col+1]*kernel_x[8];
 
 
-    output_vector_matrix[index] =vectorized_matrix[index] ;
+
+        // need to figure out the jumps top and bottom
+
+    }
+
+
+    //int size = ROWS*COLS;
+
+
+  //  output_vector_matrix[index] =  vectorized_matrix[index];
+
+
 
 
 

@@ -62,11 +62,15 @@ int main(int argc, char* argv[]) {
 
     //detect.show_frame_window();             /*display a short window */
 
-    detect.opencv_to_eigen(global_eigen_matrix);
+     detect.opencv_to_eigen(global_eigen_matrix);
 
-    std::cout << global_eigen_matrix.cols() << " | " << global_eigen_matrix.rows() << std::endl;
+   // std::cout << global_eigen_matrix.cols() << " | " << global_eigen_matrix.rows() << std::endl;
 
-    std::cout << global_eigen_matrix << std::endl;
+   // std::cout << global_eigen_matrix << std::endl;
+
+
+
+
 
 
     // TODO: triangulate with bool on the global_eigen_matrix
@@ -74,7 +78,7 @@ int main(int argc, char* argv[]) {
 
     /* Since eigen stores values in column major we use transpose */
     /* double pointers of matrix are not really good in terms of performance on GPU */
-
+    MatrixXf global_temp_matrix = global_eigen_matrix;
 
     global_eigen_matrix.transposeInPlace(); //converts rows to columns an vice versa
 
@@ -90,7 +94,7 @@ int main(int argc, char* argv[]) {
 
     detect.execute_kernels(global_vectorized_matrix, global_kernel_x, global_kernel_y, global_output_matrix);
 
-    std::cout << global_output_matrix[1] << std::endl;
+  //  std::cout << global_output_matrix[1] << std::endl;
 
     MatrixXf output(ROWS,COLS);
 
@@ -102,12 +106,19 @@ int main(int argc, char* argv[]) {
 
     detect.eigen_to_opencv(output_Image);
 
-    cv::namedWindow("The frame window ",CV_WINDOW_AUTOSIZE);
+    for(int i = 0; i < 5; i++)
+        for(int j =0 ; j <5 ; j++ ){
 
-    cv::imshow("Image", output_Image  );
-    // cv::waitKey(0); //display until key is pressed
+            std::cout << global_temp_matrix(i,j) << std::endl;
+         //   std::cout << global_eigen_matrix(j,i) << std::endl;
+            std::cout << output(i,j) << std::endl;
+            std::cout << detect.read_pixel_value(i,j) << std::endl;
+            std::cout << output_Image.at<double>(i,j) << std::endl;
 
-    cv::waitKey(5000); //display for 5 secs
+
+        }
+
+
 
 
 
