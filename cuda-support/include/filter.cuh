@@ -18,10 +18,10 @@
 #include <opencv2/core/eigen.hpp>
 #include "../../../../../../usr/local/cuda/include/driver_types.h"
 
-#define COLS 1307 // this has to be initialized for cuda mem allocation, static intializer errors?
-#define ROWS 1080
-#define GRIDSIZE 200
-#define BLOCKSIZE 500
+#define COLS 1024 // this has to be initialized for cuda mem allocation, static intializer errors?
+#define ROWS 768
+#define GRIDSIZE 1
+#define BLOCKSIZE 1024
 
 //define a global method here and use it inside the class below
 
@@ -61,11 +61,10 @@ namespace simple_edge_detector{
   void vector_to_matrix(double* vector, MatrixXf& eigen_output);
 
 
-  __global__
-  void edge_detector_gpu (double* vectorized_matrix, double* kernel_x, double* kernel_y, double* output_vector_matrix);
 
+   __global__ void edge_detector_gpu (double* vectorized_matrix, double* kernel_x, double* kernel_y, double* output_vector_matrix);
 
-
+   // __global__ void edge_detector_gpu ( double* output_vector_matrix);
 
 
 

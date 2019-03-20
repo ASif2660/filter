@@ -1085,6 +1085,8 @@ opencv2/imgproc/imgproc.hpp
 -
 opencv2/core/eigen.hpp
 -
+../../../../../../usr/local/cuda/include/driver_types.h
+/usr/local/cuda/include/driver_types.h
 
 /home/asif/CLionProjects/filter/cuda-support/src/filter.cu
 ../include/filter.cuh

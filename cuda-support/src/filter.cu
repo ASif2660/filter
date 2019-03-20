@@ -6,7 +6,6 @@
 
 
 
-
 void simple_edge_detector::edge_detector::set_output_eigen_matrix(MatrixXf &eigen_matrix) {
 
 
@@ -160,15 +159,16 @@ void simple_edge_detector::vector_to_matrix(double* vector, MatrixXf& eigen_outp
 
 __global__
 void simple_edge_detector::edge_detector_gpu (double* vectorized_matrix, double* kernel_x, double* kernel_y, double* output_vector_matrix)
+
 {
 
-    int col = blockIdx.x * blockDim.x + threadIdx.x;
+   int col = blockIdx.x * blockDim.x + threadIdx.x;
     int row = blockIdx.y * blockDim.y + threadIdx.y;
 
 
     //actual size is rows = 1080 and columns 1307
 
-    if((row < 1079 && row >0) || (col <1306 && col >0)) //within the inside indices {
+    if(row < 768 && col < 1024) { //within the inside indices {
 
         output_vector_matrix[row*1307 + col] = vectorized_matrix[row*1307 + col -col -1]* kernel_x[0] +
 
@@ -187,60 +187,70 @@ void simple_edge_detector::edge_detector_gpu (double* vectorized_matrix, double*
     }
 
 
-    //int size = ROWS*COLS;
+/*
+  int col = blockIdx.x * blockDim.x + threadIdx.x;
+  int row = blockIdx.y * blockDim.y + threadIdx.y;
 
+// indexing starts from zero
+ if (row < 768 && col < 1024)
+ output_vector_matrix[1024*row + col] = vectorized_matrix[1024*row + col];
 
-  //  output_vector_matrix[index] =  vectorized_matrix[index];
+// printf("Hello World from GPU!\n");
 
+ //output_vector_matrix[index] =  6.0;
+//  printf("The value of at %d is %f \n ", output_vector_matrix[i] );
 
-
-
-
+*/
 }
 
 void simple_edge_detector::edge_detector::execute_kernels(double* global_vectorized_matrix, double* global_kernel_x, double* global_kernel_y,
 
-                     double* global_output_matrix){
+                  double* global_output_matrix){
 
 
-    //TODO: initialize global_output_matrix before passing it
+ //TODO: initialize global_output_matrix before passing it
 
-    dim3 GRID(GRIDSIZE);
+ unsigned int threads_per_block = 128;
 
-    dim3 BLOCK(BLOCKSIZE);
+ dim3 GRID(threads_per_block,threads_per_block); // 64 by 64
 
-    cudaMalloc((void**)&device_vectorized_matrix, ROWS*COLS*sizeof(double));
+ dim3 BLOCK(COLS/GRID.x +1 , ROWS/GRID.y + 1);
 
-    cudaMalloc((void**)&device_gpu_output, ROWS*COLS*sizeof(double));
+ cudaMalloc((void**)&device_vectorized_matrix, ROWS*COLS*sizeof(double));
 
-    cudaMalloc((void**)&device_kernel_x, 9*sizeof(double));
+ cudaMalloc((void**)&device_gpu_output, ROWS*COLS*sizeof(double));
 
-    cudaMalloc((void**)&device_kernel_y, 9*sizeof(double)); // kernel size is hard coded for now, 3x3 is the size
+ cudaMalloc((void**)&device_kernel_x, 9*sizeof(double));
 
-
-    cudaMemcpy(device_vectorized_matrix, global_vectorized_matrix, ROWS*COLS*sizeof(double), cudaMemcpyHostToDevice);
-
-    cudaMemcpy(device_kernel_x, global_kernel_x, 9*sizeof(double), cudaMemcpyHostToDevice);
-
-    cudaMemcpy(device_kernel_y, global_kernel_y, 9*sizeof(double), cudaMemcpyHostToDevice);
+ cudaMalloc((void**)&device_kernel_y, 9*sizeof(double)); // kernel size is hard coded for now, 3x3 is the size
 
 
+ cudaMemcpy(device_vectorized_matrix, global_vectorized_matrix, ROWS*COLS*sizeof(double), cudaMemcpyHostToDevice);
 
-    edge_detector_gpu <<<GRID, BLOCK >>> (device_vectorized_matrix, device_kernel_x, device_kernel_y, device_gpu_output);
+ cudaMemcpy(device_kernel_x, global_kernel_x, 9*sizeof(double), cudaMemcpyHostToDevice);
+
+ cudaMemcpy(device_kernel_y, global_kernel_y, 9*sizeof(double), cudaMemcpyHostToDevice);
 
 
-    cudaMemcpy(global_output_matrix, device_gpu_output, ROWS*COLS*sizeof(double), cudaMemcpyDeviceToHost);
+  simple_edge_detector::edge_detector_gpu <<<GRID, BLOCK>>> (device_vectorized_matrix, device_kernel_x, device_kernel_y, device_gpu_output);
+
+ //simple_edge_detector::edge_detector_gpu <<<GRID,BLOCK>>> (device_gpu_output);
 
 
-    //initialize global_kernel_x, global_kernel_y and global matrix
 
-    cudaFree(device_gpu_output);
+ cudaMemcpy(global_output_matrix, device_gpu_output, ROWS*COLS*sizeof(double), cudaMemcpyDeviceToHost);
 
-    cudaFree(device_kernel_x);
+ //cudaMemcpy(global_output_matrix, device_vectorized_matrix, ROWS*COLS*sizeof(double), cudaMemcpyDeviceToHost);
 
-    cudaFree(device_kernel_y);
+ //initialize global_kernel_x, global_kernel_y and global matrix
 
-    cudaFree(device_vectorized_matrix);
+ cudaFree(device_gpu_output);
+
+ cudaFree(device_kernel_x);
+
+ cudaFree(device_kernel_y);
+
+ cudaFree(device_vectorized_matrix);
 
 
 

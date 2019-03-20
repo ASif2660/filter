@@ -25,8 +25,6 @@
 
 
 
-
-
 int main(int argc, char* argv[]) {
 
     const std::string image_name = "x.jpg";
@@ -47,30 +45,33 @@ int main(int argc, char* argv[]) {
 
     kernel_y = kernel_x.transpose();
 
+    int* block_size;
+    int* min_grid_size;
 
 
 
-#if DEBUG
-    std::cout << "Sobel Kernel for gradient along x " << kernel_x;
 
-    std::cout << "Sobel kernel for gradient alogn y " << kernel_y;
-#endif
 
     cv::Mat actual_image = cv::imread(image_name, CV_32F); /* read image */
 
-    simple_edge_detector::edge_detector detect(actual_image);        /* initialize detector */
+    cv::Mat resize_image;
+
+  //  int width_resize = 1020;
+
+  //  int height_resize = 1020;
+
+    cv::resize(actual_image, resize_image, cvSize(COLS, ROWS));
+
+    simple_edge_detector::edge_detector detect(resize_image);        /* initialize detector */
 
     //detect.show_frame_window();             /*display a short window */
 
-     detect.opencv_to_eigen(global_eigen_matrix);
+    detect.opencv_to_eigen(global_eigen_matrix);
+#if DEBUG
+    std::cout << global_eigen_matrix.cols() << " | " << global_eigen_matrix.rows() << std::endl;
 
-   // std::cout << global_eigen_matrix.cols() << " | " << global_eigen_matrix.rows() << std::endl;
-
-   // std::cout << global_eigen_matrix << std::endl;
-
-
-
-
+    std::cout << global_eigen_matrix << std::endl;
+#endif
 
 
     // TODO: triangulate with bool on the global_eigen_matrix
@@ -81,122 +82,69 @@ int main(int argc, char* argv[]) {
     MatrixXf global_temp_matrix = global_eigen_matrix;
 
     global_eigen_matrix.transposeInPlace(); //converts rows to columns an vice versa
-
+#if DEBUG
     std::cout << global_eigen_matrix.cols() << " | " << global_eigen_matrix.rows() << std::endl;
-
+#endif
     double*  global_vectorized_matrix = global_eigen_matrix.data();
+/*
+    for(  int i =0; i < ROWS*COLS;  i++)
+        std::cout << "The value at " << i << " is : " << global_vectorized_matrix[i] << std::endl;
+*/
 
     double*  global_kernel_x = kernel_y.data(); // column major and kernel_y is basically transpose of kernel_x
 
     double*  global_kernel_y = kernel_x.data();  //row major and kernel_x is basically the transpose
 
-    auto*  global_output_matrix = new double[global_eigen_matrix.rows()*global_eigen_matrix.cols()];
+    auto*  global_output_matrix = new double[ROWS*COLS];
 
     detect.execute_kernels(global_vectorized_matrix, global_kernel_x, global_kernel_y, global_output_matrix);
 
   //  std::cout << global_output_matrix[1] << std::endl;
 
+   //  for(  int i =0; i < ROWS*COLS;  i++)
+     //   std::cout << "The value at " << i << " is : " << global_output_matrix[i] << std::endl;
+
+
     MatrixXf output(ROWS,COLS);
 
     simple_edge_detector::vector_to_matrix(global_output_matrix, output );
 
+
     cv::Mat output_Image(ROWS, COLS, CV_8UC1, CvScalar(0) );
 
     detect.set_output_eigen_matrix(output);
-
+#if DEBUG
+    std::cout << output << std::endl;
+#endif
     detect.eigen_to_opencv(output_Image);
 
-    for(int i = 0; i < 5; i++)
-        for(int j =0 ; j <5 ; j++ ){
+    cv::Mat threshold_Image;
 
-            std::cout << global_temp_matrix(i,j) << std::endl;
+    cv::threshold(output_Image,threshold_Image, 50, 175, cv::THRESH_TOZERO_INV);
+
+    cv::namedWindow("The frame window ",CV_WINDOW_AUTOSIZE);
+
+    cv::imshow("Image", threshold_Image);
+    // cv::waitKey(0); //display until key is pressed
+
+    cv::waitKey(5000); //display for 5 secs
+
+
+
+   // for(int i = 0; i < ROWS; i++)
+     //   for(int j =0 ; j < COLS ; j++ ){
+
+    //        std::cout << global_temp_matrix(i,j) << std::endl;
          //   std::cout << global_eigen_matrix(j,i) << std::endl;
-            std::cout << output(i,j) << std::endl;
-            std::cout << detect.read_pixel_value(i,j) << std::endl;
-            std::cout << output_Image.at<double>(i,j) << std::endl;
+     //       std::cout << output(i,j) << std::endl;
+    //        std::cout << detect.read_pixel_value(i,j) << std::endl;
+    //        std::cout << output_Image.at<double>(i,j) << std::endl;
+       //     std::cout << output_Image.cols << output_Image.rows << "Rows and Cols " << std::endl;
+      //      std::cout << "Number of channels are " << output_Image.channels() << std::endl;
+
+       // }
 
 
-        }
-
-
-
-
-
-
-/*
-
-    double** my_matrix = new double*[global_eigen_matrix.rows()];
-
-    for( int i = 0; i< global_eigen_matrix.rows(); i++){
-
-
-        my_matrix[i] = new double[global_eigen_matrix.cols()];
-
-
-    }
-
-
-    double** my_kernel_x = new double* [kernel_x.rows()];
-
-    for( int i = 0; i< kernel_x.rows(); i++){
-
-
-        my_kernel_x[i] = new double[kernel_x.cols()];
-
-
-    }
-
-
-
-    double** my_kernel_y = new double* [kernel_y.rows()];
-
-    for( int i = 0; i< kernel_y.rows(); i++){
-
-
-        my_kernel_y[i] = new double[kernel_y.cols()];
-
-
-    }
-
-
-    //double form
-
-    detect.eigen_to_double(my_matrix,global_eigen_matrix);
-
-    detect.eigen_to_double(my_kernel_x, kernel_x);
-
-    detect.eigen_to_double(my_kernel_y, kernel_y);
-
-
-    for( int i =0; i< kernel_x.rows(); i++)
-    {
-        for( int j=0; j < kernel_x.cols(); j++){
-
-            //my_matrix[i][j] = kernel_x(i,j);
-            std::cout << "Matrix at " << i << " "<< j <<" " << my_kernel_x[i][j] << std::endl;
-
-        }
-    }
-
-
-
-
-    double** device_matrix;
-
-    cudaMalloc((void**)&device_matrix, sizeof(double*)*COLS);
-
-    double* temp_pointer[ROWS];
-
-
-    for( int i =0; i<ROWS; i++ ){
-
-            cudaMalloc((void**)&temp_pointer[i],sizeof(double)* )
-
-
-    }
-
-
-*/
 
 
 
