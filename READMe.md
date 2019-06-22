@@ -17,3 +17,6 @@ I would prefer not tamper it.
 #https://stackoverflow.com/questions/41119365/using-eigen-3-3-in-a-cuda-kernel
 
 But however Eigen vectors can be used, if you know how to flatten higher dimensional tensors to a vector ;) it should work out.  
+
+TODO: Fix cuda-support/src * errors.  
+TODO: Modular NVCC compilation
