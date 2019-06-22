@@ -1,3 +1,5 @@
+Author: M Asif C
+
 There is a high chance you might come across this error
 
 warning: calling a __host__ function from a __host__ __device__ function is not allowed
