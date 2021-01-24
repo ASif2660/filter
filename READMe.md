@@ -1,4 +1,4 @@
-Author: M Asif C
+# Developed by Mohammed Asif Chand
 
 ##All the important *.cu and *.cuh are located inside folder mylibrary. 
 ```
