@@ -1,5 +1,0 @@
-/home/asif/CLionProjects/filter/testbuild/CMakeFiles/rebuild_cache.dir
-/home/asif/CLionProjects/filter/testbuild/CMakeFiles/myLib.dir
-/home/asif/CLionProjects/filter/testbuild/CMakeFiles/testdetector.dir
-/home/asif/CLionProjects/filter/testbuild/CMakeFiles/filter.dir
-/home/asif/CLionProjects/filter/testbuild/CMakeFiles/edit_cache.dir

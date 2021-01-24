@@ -16,8 +16,8 @@ include_directories(${CUDAS_INCLUDE_DIR}) #CUDAS to avoid any internal clash
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/eigen/include/eigen3 )
 
 #creating libraries
-add_library(myLib SHARED ${CMAKE_CURRENT_SOURCE_DIR}/cuda-support/src/filter.cu
-                                   ${CMAKE_CURRENT_SOURCE_DIR}/cuda-support/include/filter.cuh) #this includes other modules into the main project #the control goes to this directory now
+add_library(myLib SHARED ${CMAKE_CURRENT_SOURCE_DIR}/mylibrary/src/filter.cu
+                         ${CMAKE_CURRENT_SOURCE_DIR}/mylibrary/include/filter.cuh) #this includes other modules into the main project #the control goes to this directory now
 
 
 #appending targets

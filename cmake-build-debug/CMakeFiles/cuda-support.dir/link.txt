@@ -1,2 +1,0 @@
-/usr/bin/ar qc lib/libcuda-support.a  CMakeFiles/cuda-support.dir/cuda-support/src/filter.cpp.o
-/usr/bin/ranlib lib/libcuda-support.a
