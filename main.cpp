@@ -6,7 +6,7 @@
 #include <iostream>
 #include "mylibrary/include/filter.cuh"
 #include "eigen/include/eigen3/Eigen/src/Core/Matrix.h"
-#include "../../../../usr/local/cuda/include/driver_types.h"
+#include "cuda/include/driver_types.h"
 #include <opencv2/core/core.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
@@ -97,25 +97,6 @@ int main(int argc, char* argv[]) {
     cv::imshow("Image", threshold_Image);
     
     cv::waitKey(5000); //display for 5 secs
-
-
-/*
- 
-     for(int i = 0; i < ROWS; i++)
-         
-            for(int j =0 ; j < COLS ; j++ ){
-
-            std::cout << global_temp_matrix(i,j) << std::endl;
-            std::cout << global_eigen_matrix(j,i) << std::endl;
-            std::cout << output(i,j) << std::endl;
-            std::cout << detect.read_pixel_value(i,j) << std::endl;
-            std::cout << output_Image.at<double>(i,j) << std::endl;
-            std::cout << output_Image.cols << output_Image.rows << "Rows and Cols " << std::endl;
-            std::cout << "Number of channels are " << output_Image.channels() << std::endl;
-
-        }
-
-*/
 
 
 
